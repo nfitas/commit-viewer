@@ -5,6 +5,7 @@ import requests
 import json
 import abc
 
+# TODO Correct way to import git auth
 from secrets import git_user
 from secrets import git_token
 
@@ -200,6 +201,7 @@ class CommitRetriever:
 			self.commit_list_response['Status'] = 'OK'
 			self.commit_list_response['commit_list'] = commit_list
 				
+		#TODO Sorting by parent (It seems that the API already returns that way)
 		return self.commit_list_response
 
 

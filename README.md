@@ -9,3 +9,8 @@ Requests 2.18.1
 
 ### How to run:
 python manage.py runserver
+
+### Usage:
+Search for a specific project in GitHub by {user}/{repository}
+Exemplo:
+	nfitas/commit-viewer
