@@ -12,5 +12,5 @@ python manage.py runserver
 
 ### Usage:
 Search for a specific project in GitHub by {user}/{repository}
-Exemplo:
+Exemple:
 	nfitas/commit-viewer
