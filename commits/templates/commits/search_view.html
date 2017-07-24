@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block top-content %}
+	{% include "commits/search_form.html" %}
+{% endblock top-content %}
+
+{% block middle-content %}
+	{% if invalid_url %} <h1>Invalid GitHub URL</h1> {% endif %}
+
+{% for repo in repos %}
+<div class='row'>
+	<div class='col-sm-6 col-xs-12'>
+		<h3>{{ repo.url }} </h3>
+		<a href="{% url 'commits:list' pk=repo.url %}">Details</a>	
+	</div>
+</div>
+{% endfor %}
+
+{% endblock middle-content %}
+
+
+

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block top-content %}
+<h3>{{ reponame }}</h3>
+{% endblock top-content %}
+
+{% block middle-content %}
+<!-- <h1>{{ commits_list }}</h1>
+ -->
+{% for commit in commits %}
+<div class='row'>
+	<div class='col-sm-3 col-xs-12'>
+		<h3>{{ commit.identifier }} </h3>
+	</div>
+</div>
+<div class='row'>
+	<div class='col-sm-6 col-xs-12'>
+		<b>Parents:</b> {{ commit.parents }}
+	</div>
+</div>
+<div class='row'>
+	<div class='col-sm-9' style=''>
+		<b>Author</b> {{ commit.author }} <br/>
+	</div>
+	<div class='col-sm-6' style=''>
+		{{ commit.description }}
+	</div>
+	<div class='col-sm-3' style=''>
+		{{ commit.date }}
+	</div>
+</div>
+{% endfor %}
+
+{% endblock middle-content %}
